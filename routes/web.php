@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PayMobController;
+use App\Http\Controllers\SampleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialLoginController;
@@ -20,3 +21,5 @@ use App\Http\Controllers\SocialLoginController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("send-mail", [SampleController::class, "sendMail"]);

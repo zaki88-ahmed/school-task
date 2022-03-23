@@ -19,9 +19,9 @@ class Student extends Authenticatable  implements MustVerifyEmail
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes, HasRoles;
 
 
-    protected $fillable = ['name', 'status', 'order', 'school_id'];
+    protected $fillable = ['id', 'name', 'status', 'order', 'school_id'];
     protected $guard_name = 'student';
-    protected $hidden = ['id', 'deleted_at', 'created_at', 'updated_at', 'roles'];
+    protected $hidden = ['deleted_at', 'created_at', 'updated_at', 'roles'];
 
     public function schools()
     {
